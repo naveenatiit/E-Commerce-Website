@@ -1,0 +1,42 @@
+.card-top{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 0.25rem;
+
+}
+
+.item img{
+  size: 6px;
+
+}
+.item{
+  margin: 0px 15px;
+text-align: center ;
+}
+
+.item text{
+  padding: 13px;
+}
+
+.item a:hover{
+  color: green;
+}
+
+.card:hover{
+  transition:0.3s ease-in-out;
+  transform:  scale(1.01);
+  z-index: 11;
+}
+.card{
+  padding:auto;
+  margin: auto;
+  margin-bottom: 1%;
+}
+
+

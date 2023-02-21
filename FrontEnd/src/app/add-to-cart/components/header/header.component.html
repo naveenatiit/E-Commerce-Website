@@ -1,0 +1,33 @@
+<header>
+  <div class="navbar bg-info shadow-sm">
+
+    <i style="font-size: 30px; margin-left: 1rem;" class="fas fa-shipping-fast" > &nbsp;
+      <button routerLink="" class="btn btn-info border-dark">Home</button>
+    </i>
+
+    <ng-container *ngIf="check; else notLoggedIn" >
+      <div class="navbar-brand align-item-center d-flex" *ngIf="showSearchBar">
+          <input [(ngModel)]="keyword"  name="searchKeyword" type="text" class="form-control"  placeholder="search Products">
+          <span (click)="searchProducts()" class=" fas fa-search search-icon" id="search-icon"></span>
+      </div>
+
+      <span >Welcome {{loginUserView.name}}!</span>
+      <button class="btn btn-info" (click)="updateProfile()">
+          <i style="font-size: 30px;" class="fas fa-solid fa-user"></i>
+      </button>
+
+      <button routerLink="/login" class="btn btn-info border-dark" (click)="logoutUser()">Logout</button>
+      <button style="font-size: 30px" class="btn btn-info" routerLink="/addToCart/cart">
+          <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+          <div style="font-size: 10px;" class="badge bg-success">{{totalItem}}</div>
+      </button>
+    </ng-container>
+
+    <ng-template #notLoggedIn>
+      <span style="font-size: Large;">Welcome to Shopping Cart</span>
+      <button class="btn btn-info border-dark" style="margin-right: 2rem; ;" routerLink="/login">Sign In</button>
+    </ng-template>
+
+  </div>
+
+</header>

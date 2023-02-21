@@ -1,0 +1,29 @@
+     <div class="login-container">
+      <form #signUpform="ngForm"  class="form-login">
+
+        <ul class="login-nav">
+          <li class="login-nav__item ">
+            <a routerLink="/login">Sign In</a>
+          </li>
+          <li class="login-nav__item active">
+            <a routerLink="/signup">Sign Up</a>
+          </li>
+        </ul>
+        <label for="login-input-user" class="login__label">
+          Name
+        </label>
+        <input id="login-input-user" [(ngModel)]="registerUserData.name"  class="login__input" type="text" name="name"/>
+        <label for="login-input-user" class="login__label">
+          Email
+        </label>
+        <input type="email"  [(ngModel)]="registerUserData.email" required class="login__input"  id="login-input-user" name="email" [pattern]="emailRegex"/>
+        <label for="login-input-password" class="login__label">
+          Password
+        </label>
+        <input id="login-input-password"  [(ngModel)]="registerUserData.password" class="login__input" type="password"  name="password" />
+
+        <button (click)="registerUser()" class="login__submit" >Sign Up</button>
+      </form>
+     </div>
+
+

@@ -1,0 +1,10 @@
+<div class="navbar bg-info shadow-sm">
+    <button routerLink="addProducts" class="btn btn-primary">Add Products</button>
+    <span style="font-size: large;">Welcome Admin!!!</span>
+    <button routerLink="/adminLogin" class="btn btn-danger" (click)="logoutAdmin(adminLoginData.email)">Log out</button>
+
+</div>
+<router-outlet></router-outlet>
+
+
+

@@ -1,0 +1,35 @@
+<div class="card-top container-fluid">
+  <div class="container d-flex" style="height:9.5rem;">
+      <div class="item" >
+          <a (click)="filterByCategory('')">
+              <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+              <h6>All Products</h6>
+          </a>
+      </div>
+      <div class="item">
+          <a (click)="filterByCategory('Electronics')">
+              <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+              <h6>Electronics</h6>
+          </a>
+      </div>
+      <div class="item">
+          <a (click)="filterByCategory('Fashion')">
+              <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
+              <h6>Fashion</h6>
+          </a>
+      </div>
+      <div class="item">
+          <a (click)="filterByCategory('Jewellery')">
+              <img style="width: 120px;
+              margin-top: 9px;
+              padding: 16px;
+              margin-bottom: 2px;
+             " src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50"
+                  alt="">
+              <h6>Jewellery</h6>
+          </a>
+      </div>
+  </div>
+
+<app-cards (eventInfo1)="addToCart($event)" [change]="change"></app-cards>
+</div>

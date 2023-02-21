@@ -1,0 +1,46 @@
+<ng-container *ngIf="orderHistoryresponse.length!=0">
+
+    <div class="container">
+        <div class="card-table">
+            <div class="card-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Discription</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+
+
+                        <ng-container *ngFor="let item of orderHistoryresponse;let i=index">
+                            <tr *ngFor="let orderedProducts of item.productsToOrder">
+
+
+                                <td>{{i+1}}</td>
+                                <td>{{orderedProducts.product.name}}</td>
+                                <td><img style="width:120px" src={{orderedProducts.product.imageUrl}} alt="nothing">
+                                </td>
+                                <td style="width:25%">{{orderedProducts.product.details}}</td>
+                                <td style="width:12%">{{orderedProducts.product.price}}</td>
+                                <td style="width:12%">{{orderedProducts.quantity}}</td>
+                                <td><button class="btn btn-success"><i class="fas fa-trash-alt"></i></button></td>
+
+
+
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</ng-container>

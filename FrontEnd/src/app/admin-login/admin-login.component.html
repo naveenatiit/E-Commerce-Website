@@ -1,0 +1,28 @@
+<div class="login-container" *ngIf="flag">
+    <form #signUpform="ngForm" class="form-login">
+
+
+      <ul class="login-nav">
+        <li class="login-nav__item active">
+          <a routerLink="/login">Admin Sign In</a>
+        </li>
+
+      </ul>
+      <label for="login-input-user" class="login__label">
+        Email
+      </label>
+      <input id="login-input-user" class="login__input" type="text" [(ngModel)]="adminLoginData.email" name="email" required/>
+      <label for="login-input-password" class="login__label">
+        Password
+      </label>
+      <input id="login-input-password" class="login__input" type="password" [(ngModel)]="adminLoginData.password"  name="password" required/>
+
+      <button (click)="adminLogin()" class="login__submit" >Sign in</button>
+
+
+
+  </form>
+
+  <a routerLink="/login" class="login__forgot">Sign in as User?</a>
+  </div>
+

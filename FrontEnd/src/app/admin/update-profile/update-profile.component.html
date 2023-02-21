@@ -1,0 +1,18 @@
+<div class="container mt-2">
+    <div class="card">
+<form #updateAdminForm="ngForm" (ngSubmit)="updateAdmindata(updateAdminForm.value)">
+    <div class="mb-3">
+        <label for="example1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="example2" ngModel name="name">
+  
+      </div>
+    <div class="mb-3">
+      <label for="example2" class="form-label">Email</label>
+      <input type="email" class="form-control" id="example2" ngModel name="email">
+
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="updateAdmin()">Update Account Details</button>
+  </form>
+  <button style="width:200px" class="btn btn-success mt-3" (click)="removeAdmin()">Delete Account</button>
+</div>
+</div>

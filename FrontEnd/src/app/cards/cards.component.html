@@ -1,0 +1,18 @@
+<div class="container ">
+  <div class="row ">
+      <ng-container *ngFor="let item of productList" >
+          <div class="card col-md-3 ">
+              <img style=" height:20rem" class="img-fluid m-2" src={{item.imageUrl}} alt="">
+                <h5 >{{item.name}}</h5>
+                <p><strong>{{item.price | currency:"INR"}}</strong></p>
+                <ng-container *ngIf="isAdminLoggedIn">
+                  <button class="btn btn-danger" (click)="callRemoveProduct(item.productId)"> Remove Product</button>
+                  <button class="btn btn-primary" style="margin-top: 1%; margin-bottom: 2%;" (click)="callUpdateProduct(item)" > Update Product</button>
+                </ng-container>
+                <ng-container *ngIf="isUserLoggedIn">
+                  <button class="btn btn-info" (click)="callAddToCart(item)">Add to cart</button>
+                </ng-container>
+            </div>
+      </ng-container>
+  </div>
+</div>
